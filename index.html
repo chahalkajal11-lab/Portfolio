@@ -37,17 +37,14 @@
       scroll-behavior: smooth;
     }
 
-.home{
+.home {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-
-  background: linear-gradient(to right, #49a792, #f8fafc);
 }
 
 .home-box {
-  background: #e6fffb;
+ background: rgba(168, 85, 247, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(12px) ;
   max-width: 750px;
@@ -100,13 +97,19 @@
   box-shadow: none;
   outline: none;
 }
-.profile-img{
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+.profile-img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: auto;
 }
+
+.profile-img:hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+
     </style>
   </head>
   <body>
@@ -132,8 +135,8 @@
 
   <section id="home" class="home">
     <div class="container">
-      <div class="row align-items-center justify-content-center">
-        <div class="col-lg-7">
+      <div class="row align-items-center justify-content-between">
+        <div class="col-lg-6">
           <div class="home-box p-5 rounded-4">
              <h1 class="display-4 fw-bold text-primary">
             Hi, I'm <span class="text-dark">KAJAL CHAHAL</span>
@@ -157,23 +160,27 @@
         class="btn btn custom-btn">
         View Certificate
   </a>
-    <a href="d:\Kajal Chahal Resume .pdf"
-     class="btn custom-btn">
-     <i class="bi bi-file-earmark-person-fill"></i> Resume
-  </a>
+<a href="./Resume.pdf"
+   target="_blank"
+   class="btn custom-btn">
 
+   <i class="bi bi-file-earmark-person-fill"></i>
+   Resume
+</a>
+    </div>
+    </div>
+    </div>
+     <div class="row align-items-center">
   
+  <div class="col-lg-7">
+    <!-- text section -->
+  </div>
 
-    </div>
-    </div>
-    </div>
-      <div class="col-lg-5 text-center">
+  <div class="col-lg-5 text-center">
+    <img src="https://png.pngtree.com/png-vector/20240506/ourmid/pngtree-cute-cartoon-girl-doing-office-work-on-transparent-background-png-image_12375933.png" class="profile-img">
+  </div>
 
-        <img src="girl.png"
-             alt="Profile"
-             class="profile-img">
-
-      </div>
+</div>
     </div>
     </div>
   </section>
@@ -308,7 +315,7 @@
       <!-- Project 1 -->
       <div class="col-md-5 col-md-6">
         <div class="home-box">
-            <h3 class="fw-bold text-info">
+            <h3 class="fw-bold text-warning">
             Auth API
           </h3>
           <p class="text-dark mt-3">
@@ -316,7 +323,7 @@
            following the MVC architecture.
           </p>
 
-        <p class="text-info">
+        <p class="text-warning">
         <strong>API Endpoints:</strong><br>
         <span class="text-dark">GET</span> /api/users → Get all users <br>
         <span class="text-dark">GET</span> /api/users/:id → Get single user <br>
@@ -325,7 +332,7 @@
              <a href="https://github.com/chahalkajal11-lab/AUTHProject" class="btn custom-btn">
               GitHub
             </a>
-             <a href="https://authproject-b85s.onrender.com" class="btn custom-btn ms-2">
+             <a href="https://authproject-b85s.onrender.com"  target="_blank" class="btn custom-btn ms-2">
               Live Demo
             </a>
           </div>
@@ -353,7 +360,7 @@
               GitHub
             </a>
 
-            <a href= "https://todoauthapi.onrender.com" class="btn custom-btn ms-2">
+            <a href= "https://todoauthapi.onrender.com"   target="_blank"class="btn custom-btn ms-2">
               Live Demo
             </a>
            </div>
